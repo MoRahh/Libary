@@ -10,27 +10,19 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15%;
+    margin-top: 1%;
 }
 
-.user-input {
-    width: 600px;
+input {
     height: 30px;
     border-radius: 5px;
     border: solid gray 1px;
-    padding: 2px;
     background-color: black;
     color: white;
     font-size: 16px;
+    padding: 3px;
 }
 
-.user-input:focus {
-    outline-style: none;
-    box-shadow: none;
-    border-color: transparent;
-    background-color: black;
-    color: white;
-}
 
 .button {
     padding: 10px 20px;
@@ -40,8 +32,21 @@
     color: white;
 }
 
+.submit {
+    padding: 10px 20px;
+    border-radius: 0 30px 0 30px;
+    border: none;
+    background-color: rebeccapurple;
+    color: white;
+}
+
 .button:hover {
     background-color: rgb(3, 78, 3);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: rgb(46, 13, 78);
     cursor: pointer;
 }
 
@@ -49,3 +54,11 @@ h1 {
     text-align: center;
     padding: 30px;
 }
+
+#form {
+    display: none;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: rgb(128, 128, 128, .30);
+}
+
