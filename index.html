@@ -13,8 +13,16 @@
 
 <div class="container">
     <h1>Libary</h1>
-    <input class="user-input" type="text" placeholder="Book Name">
-    <input class="button" type="submit">
+    <button class="button">New Book</button>
+    <form id="form" class="flex">
+        <input type="text" placeholder="Title" />
+        <input type="text" placeholder="Author" />
+        <input type="text" placeholder="Pages" />
+        <input type="checkbox" id="read"" />
+        <label for="read">Read?</label>
+        <button class="submit">Submit</button>
+      </form>
+    <div class="books"></div>
 </div>
 
 <script src="main.js"></script>
