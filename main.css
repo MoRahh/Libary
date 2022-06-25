@@ -39,15 +39,16 @@ h2 {
     align-items: center;
     padding-top: 5em;
     flex-wrap: wrap;
+    margin-bottom: 5em;
 }
 .card {
     padding: 3em;
-    color: gray;
-    background-color: whitesmoke;
+    color: white;
+    background-image: linear-gradient(to bottom right, pink, black);
     font-weight: 300;
     box-shadow:3px 3px 3px 3px gray ;
     border-radius: 10px;
-    width: 300px;
+    width: 250px;
     position: relative;
 }
 
@@ -70,17 +71,19 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;
     font-weight: 300;
     margin-top: 5%;
+    text-transform: uppercase;
+    text-decoration:underline;
 }
 
 .flex {
     display: flex;
     justify-content: space-between;
     padding: 5em;
-    background-image: linear-gradient(to bottom right, red, black);
+    background-image: linear-gradient(to bottom right, pink, black);
 }
 
 .flex button {
@@ -91,6 +94,11 @@ h3 {
     border-radius: 5em;
     color: white;
     font-size: 1rem;
+}
+
+.flex button:hover {
+    cursor:pointer;
+    background-color: rgb(33, 154, 175,.75);
 }
 
 .user {
@@ -254,13 +262,32 @@ h3 {
     border: none;
     border-radius: 5em;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 50px;
     position: relative;
-    left: 9em;
-    padding-bottom: 20px;
+    left: 8em;
+    margin-bottom: 20px;
     background-color: #0ea5e9;
   }
 
 .btn:hover {
     cursor: pointer;
+    background-color: #0ea4e993;
 }
+
+.book-title {
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.book-author {
+    font-size: 1.5rem;
+}
+
+.book-pages {
+    font-size: 1.5rem;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
