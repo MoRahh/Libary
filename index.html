@@ -8,27 +8,62 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    
-
-<div class="container">
-    <h1>Libary</h1>
-    <button class="button">New Book</button>
-    <form id="form" class="flex">
-        <input class="input" type="text" placeholder="Title" />
-        <input class="input" type="text" placeholder="Author" />
-        <input class="input" type="text" placeholder="Pages" />
-        <input class="input" type="checkbox" id="read"" />
-        <label for="read">Read?</label>
-        <button class="submit">Submit</button>
-      </form>
+    <div class="flex">
+        <div class="user">
+            <div class="profile">
+            <img src="images/pfp.jpg" alt="#">
+        </div>
+        <div class="name">
+            <p>Mohammed Aburahma</p>
+            <p class="desc">Hi there, Mohammed</p>
+        </div>
+        </div>
+    <button class="add-book">Add New Book</button>
 </div>
+    <main class="content">
+        <h3>Your Books</h3>
+        <div class="books">
+            
 
-<main>
-    <section class="book-list">
-        <h2>Books</h2>
-    </section>
-</main>
+            <!-- Section for all project cards -->
+            <div class="books"></div>
+        </div>
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+            <div class="modal-form">
+                <h1 class="form-title">Add Book</h1>
+                <form class="add-book">
+                    <div class="modal-input-field">
+                        <label for="book-title">Title:</label>
+                        <input type="text" class="modal-form-input" id="book-title">
+                    </div>
+                    <div class="modal-input-field">
+                        <label for="book-author">Author:</label>
+                        <input type="text" class="modal-form-input" id="book-author">
+                    </div>
+                    <div class="modal-input-field">
+                        <label for="book-pages">Pages:</label>
+                        <input type="number" min="0" class="modal-form-input" id="book-pages">
+                    </div>
+                    <div class="modal-input-field">
+                        <span class="modal-read">Read?</span>
+                        <label for="" class="container"></label>
+                        <input type="checkbox" class="modal-form-input" id="book-read" name="book-read">
+                    </div>
+                    <div class="submit-modal-form">
+                        <button type="submit" class="btn form-add-button"></button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
 
 <script src="main.js"></script>
 

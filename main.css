@@ -1,70 +1,266 @@
+:root {
+    font-size: 16px;
+    font-family: "Ubuntu Condensed", sans-serif;
+    --text-primary: black;
+    --text-secondary: white;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 1s;
+    --drawer-color: #0ea5e9;
+    --drawer-width: clamp(210px, 22vw, 325px);
+    --nav-bg-1: #f8f8f8;
+    --nav-color-1: #c9c9c9;
+    --nav-color-2: #62daff6e;
+    --blue-1: #084c61;
+    --content-gray: rgb(235, 235, 235);
+    --transition-notDrawer: margin-left 0.4s ease-in;
+    --transition-drawer: width 0.4s ease-in;
+  }
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 1%;
-}
-
-.input {
-    height: 30px;
-    border-radius: 5px;
-    border: solid gray 1px;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 3px;
-}
-
-
-.button {
-    padding: 10px 20px;
-    border-radius: 30px 0 30px 0;
-    border: none;
-    background-color: green;
-    color: white;
-}
-
-.submit {
-    padding: 10px 20px;
-    border-radius: 0 30px 0 30px;
-    border: none;
-    background-color: rebeccapurple;
-    color: white;
-}
-
-.button:hover {
-    background-color: rgb(3, 78, 3);
-    cursor: pointer;
-}
-
-.submit:hover {
-    background-color: rgb(46, 13, 78);
-    cursor: pointer;
-}
-
-h1 {
-    text-align: center;
-    padding: 30px;
-}
-
-#form {
-    display: none;
-    border-radius: 20px;
-    padding: 1%;
-    background-color: rgb(128, 128, 128, .30);
-}
 
 h2 {
-    color: gray;
+    color: black;
     text-align: center;
     font-weight: 300;
     margin: 20px 20px;
+}
+
+.books {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+    flex-wrap: wrap;
+}
+.card {
+    padding: 3em;
+    color: gray;
+    background-color: whitesmoke;
+    font-weight: 300;
+    box-shadow:3px 3px 3px 3px gray ;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.5rem;
+    border: none;
+    color: black;
+    border-radius: 50%;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em;
+    background-image: linear-gradient(to bottom right, red, black);
+}
+
+.flex button {
+    padding: 1px 40px;
+    height: auto;
+    border: none;
+    background-color: rgb(33, 154, 175);
+    border-radius: 5em;
+    color: white;
+    font-size: 1rem;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.user img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.user .name {
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.desc {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    padding: 5px 5px 5px 20px;
+    border: 1px solid #888;
+    width: 350px;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-right: 5px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-title {
+    font-size: xx-large;
+    text-align: center;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .modal-form {
+    padding-top: 5px;
+  }
+  .modal-form-input {
+    border: 0;
+    margin-left: auto;
+
+    background-color: rgba(44, 66, 164, 0.198);
+    padding: 0.5rem 1.5rem;
+    outline-color: var(--blue-1);
+    border-radius: 5px;
+  }
+  .modal-input-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .container {
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(44, 66, 164, 0.198);
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: var(--drawer-color);
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: var(--blue-1);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .modal-read {
+    padding-top: 10px;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 5em;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    left: 9em;
+    padding-bottom: 20px;
+    background-color: #0ea5e9;
+  }
+
+.btn:hover {
+    cursor: pointer;
 }
