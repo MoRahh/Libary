@@ -34,7 +34,7 @@ h2 {
 .books {
     display: flex;
     flex-direction: row;
-    gap: 3em;
+    gap: 1em;
     justify-content: center;
     align-items: center;
     padding-top: 5em;
@@ -46,11 +46,18 @@ h2 {
     color: white;
     background-image: linear-gradient(to bottom right, pink, black);
     font-weight: 300;
-    box-shadow:3px 3px 3px 3px gray ;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 250px;
     position: relative;
+    transition: .1s ease;
+    
 }
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
 
 .delete {
     position: absolute;
@@ -60,13 +67,17 @@ h2 {
     border: none;
     color: black;
     border-radius: 50%;
-    background-color: red;
+    background-color: transparent;
+    color: red;
     width: 30px;
     height: 30px;
+    transition: .1s ease;
 }
 
 .delete:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(83, 13, 13);
 }
 
 h3 {
@@ -286,3 +297,5 @@ h3 {
 .book-pages {
     font-size: 1.5rem;
 }
+
+
