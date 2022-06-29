@@ -224,34 +224,13 @@ h3 {
     width: 25px;
     background-color: rgba(44, 66, 164, 0.198);
   }
-  
-  .container:hover input ~ .checkmark {
-    background-color: var(--drawer-color);
-  }
-  
-  .container input:checked ~ .checkmark {
-    background-color: var(--blue-1);
-  }
-  
+
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-  }
+
   .modal-read {
     padding-top: 10px;
   }
@@ -274,17 +253,6 @@ h3 {
     background-color: #0ea4e993;
 }
 
-.book-title {
-    text-decoration: underline;
-    font-size: 2rem;
-}
 
-.book-author {
-    font-size: 1.5rem;
-}
-
-.book-pages {
-    font-size: 1.5rem;
-}
 
 
