@@ -1,9 +1,11 @@
 # Libary
 
-A Simple Website I built to practice my JavaScript Foundation.
-Used HTML/CSS/VanillaJS
+Built mainly to Practice my Object Constructor Skills in JavaScript,
+Used HTML/CSS and JavaScript.
 
 Steps:
-- Created a page with 16x16 grid of square divs using JavaScript.
-- Added a hover effect so that the grid changes color when the mouse hovers over it,leaving a pixelated trail through the grid like a pen would.
-- Created a button that will ask the user about the number of squares, Once entered the existing grid is removed and a new grid is generated in the same total space as before.
+- All of the books objects were to be stored in a simple array, I added a function to the script that takes the user's input
+and stores the new book Objects into an array.
+- Wrote a function that loops through the array and displays each book on the page, each on their own "Card".
+- Associated my DOM elements with the actual book objects by giving them data attrivute that corresponds to the index
+of the libary array.
